@@ -2,8 +2,6 @@
 
 A days until christmas counter for iTerm.
 
-Ryan, you can make it account for all future years :)
-
 ## Install
 
 - Enable iTerm2's Python API
