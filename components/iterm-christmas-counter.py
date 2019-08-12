@@ -25,7 +25,8 @@ async def main(connection):
 
     @iterm2.StatusBarRPC
     async def counter(knobs):
-        christmas = datetime.datetime(2019, 12, 25)
+        christmas = datetime.datetime.now()
+        christmas = christmas.replace(month=12, day=25)
         return "🎄 {}".format((christmas - datetime.datetime.now()).days)
 
     await component.async_register(connection, counter)
