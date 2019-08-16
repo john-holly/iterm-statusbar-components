@@ -1,6 +1,13 @@
-# iterm-xmax-counter
+# iterm-statusbar-components
 
-A days until christmas counter for iTerm.
+This repository contains status bar indicators for:
+
+* Days until Christmas
+* Days of employment
+
+## Configuration
+
+To configure the days of employment statusbar indicator's date, open `components/iterm-captains-log.py` and modify `employed_at` to your start-date.
 
 ## Install
 

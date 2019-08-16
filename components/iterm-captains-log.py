@@ -15,21 +15,20 @@ sys.path.append(expand_path(CONFIG['PipPackagePath']))
 
 async def main(connection):
     component = iterm2.StatusBarComponent(
-        short_description='Days until Christmas',
-        detailed_description='Display the number of days until christmas.',
+        short_description='Days employed',
+        detailed_description='Display the number of days at Kubra.',
         knobs=[],
-        exemplar='🎄 93',
+        exemplar='💼 93',
         update_cadence=1,
-        identifier='xmas.counter'
+        identifier='employment.counter'
     )
 
     @iterm2.StatusBarRPC
-    async def christmas_counter(knobs):
-        christmas = datetime.datetime.now()
-        christmas = christmas.replace(month=12, day=25)
-        return "🎄 {}".format((christmas - datetime.datetime.now()).days)
+    async def days_employed_counter(knobs):
+        employed_at = datetime.datetime(month=6, day=24, year=2019)
+        return "💼 {}".format((datetime.datetime.now() - employed_at).days)
 
-    await component.async_register(connection, christmas_counter)
+    await component.async_register(connection, days_employed_counter)
 
 
 iterm2.run_forever(main)
