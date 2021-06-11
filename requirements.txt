@@ -1,4 +1,4 @@
 iterm2==0.72
 protobuf==3.9.1
 six==1.12.0
-websockets==8.0.2
+websockets==9.1
